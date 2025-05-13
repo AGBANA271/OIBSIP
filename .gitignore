@@ -1,0 +1,9 @@
+__pycache__/
+.spyderproject
+*.pyc
+.idea/
+.vscode/
+Thumbs.db
+*.log
+*.tmp
+
