@@ -66,7 +66,10 @@ fig = px.pie(
     color = 'sentiment_label',
     color_discrete_map= {'Positive': 'green', 'Neutral': 'grey', 'Negative': 'red'}
     )
-fig.show()
+#fig.show()
+
+print( TwitterData_sampled.head())
+print( TwitterData_sampled['sentiment_label'].unique())
 
 #Layout
 app.layout = dbc.Container([
@@ -106,7 +109,12 @@ def update_tweets(keyword):
                 text
                 ]) for text, sentiment in samples
 ])
+    
+import webbrowser
 
+if __name__=='__main__':
+    webbrowser.open_new("http://127.0.0.1:8050/")
+    app.run(debug=True)
 
 
 
